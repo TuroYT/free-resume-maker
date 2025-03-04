@@ -41,13 +41,13 @@ const AISuggestionButton = ({ section, content }) => {
       
       {suggestions && (
         <div className="bg-zinc-100 p-4 rounded mt-2 -ml-20 shadow-md">
-          <h3 className="text-zinc-800 font-semibold mb-2 text-left">AI Suggestions:</h3>
+          <h3 className="text-zinc-800 font-semibold mb-2 text-left">Suggestions:</h3>
           <div className="text-zinc-700 whitespace-pre-line">{suggestions}</div>
           <button
             onClick={() => setSuggestions('')}
             className="mt-2 bg-zinc-800 text-white px-3 py-1 rounded hover:bg-zinc-700"
           >
-            Dismiss
+            Cacher
           </button>
         </div>
       )}

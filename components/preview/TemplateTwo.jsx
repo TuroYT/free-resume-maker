@@ -25,7 +25,8 @@ const TemplateTwo = ({
   sectionOrder,
   onDragEnd,
   resumeData,
-  setResumeData
+  setResumeData,
+  profilePicture
 }) => {
 
   const sections = [
@@ -231,6 +232,18 @@ const TemplateTwo = ({
     <div className="w-full h-full bg-white p-4">
       {/* Header Section */}
       <div className="text-center mb-2">
+        {/* Add profile picture */}
+        {profilePicture && (
+          <div className="flex justify-center items-center mb-2">
+            <div className="w-24 h-24 rounded-full overflow-hidden mb-2 mx-auto">
+              <img
+                src={profilePicture}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        )}
         <h1 className="name">{namedata}</h1>
         <p className="profession">{positiondata}</p>
         <ContactInfo

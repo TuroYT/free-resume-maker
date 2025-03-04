@@ -38,6 +38,7 @@ export default function Builder(props) {
       const reader = new FileReader();
       reader.onload = (event) => {
         setResumeData({ ...resumeData, profilePicture: event.target.result });
+        console.info("Picture loaded", event.target.result)
       };
       reader.readAsDataURL(file);
     } else {

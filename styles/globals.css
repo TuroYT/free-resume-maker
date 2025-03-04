@@ -134,7 +134,7 @@
     }
 
     .preview::after {
-        content: "Made using : free-next-resume-maker.vercel.app ";
+        content: "";
         position: fixed;
         bottom: 0;
         right: 0;

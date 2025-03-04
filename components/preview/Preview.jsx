@@ -169,6 +169,17 @@ const Preview = () => {
           {currentTemplate === "template1" ? (
             <div className="w-full h-full bg-white p-4">
               <div className="text-center mb-2">
+                <div className="flex justify-center items-center mb-2">
+                  {resumeData.profilePicture && (
+                    <div className="w-24 h-24 rounded-full overflow-hidden mb-2 mx-auto">
+                      <img
+                        src={resumeData.profilePicture}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
+                </div>
                 <h1 className="name">{resumeData.name}</h1>
                 <p className="profession">{resumeData.position}</p>
                 <ContactInfo
@@ -211,7 +222,7 @@ const Preview = () => {
                   {resumeData.summary.length > 0 && (
                     <div className="mb-1">
                       <h2 className="section-title mb-1 border-b-2 border-gray-300">
-                        Summary
+                        Profil
                       </h2>
                       <p className="content break-words">{resumeData.summary}</p>
                     </div>
@@ -280,7 +291,7 @@ const Preview = () => {
                             contentEditable
                             suppressContentEditableWarning
                           >
-                            Work Experience
+                            Expériences professionnelles
                           </h2>
                           {resumeData.workExperience.map((item, index) => (
                             <Draggable
@@ -364,7 +375,7 @@ const Preview = () => {
                             contentEditable
                             suppressContentEditableWarning
                           >
-                            Projects
+                            Projets
                           </h2>
                           {resumeData.projects.map((item, index) => (
                             <Draggable
@@ -475,6 +486,7 @@ const Preview = () => {
               onDragEnd={handleTemplateTwoDragEnd}
               resumeData={resumeData}
               setResumeData={setResumeData}
+              profilePicture={resumeData.profilePicture}
             />
           )}
         </DragDropContext>
