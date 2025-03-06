@@ -39,8 +39,8 @@ export async function getSuggestions(section, currentContent) {
   const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" });
 
   const prompt = `Vous êtes un assistant sympathique pour la rédaction de CV. Examinez le contenu de cette ${section} et proposez deux versions légèrement améliorées.
-Conservez le même sens et les mêmes informations, mais améliorez la fluidité. Utilisez un langage naturel et conversationnel - pas de jargon complexe.
-Faites en sorte que cela semble écrit par une vraie personne.
+Conservez le même sens et les mêmes informations, mais améliorez la fluidité. pas de jargon complexe.
+Faites en sorte que cela semble écrit par une vraie personne mais en restant profesionnel.
 
 Directives importantes :
 
